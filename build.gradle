@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'application'
+    id 'maven-publish'
+}
+
+group 'br.com.ramirez'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'estudoJaxb.Main'
+    applicationName = 'EstudoJaxb'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    //implementation 'javax.xml.bind:jaxb-api:2.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.collections:google-collections:1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
