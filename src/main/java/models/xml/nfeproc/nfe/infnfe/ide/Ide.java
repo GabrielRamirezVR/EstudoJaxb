@@ -1,71 +1,89 @@
 package models.xml.nfeproc.nfe.infnfe.ide;
 
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
+import models.tags.TagXml;
+import models.xml.nfeproc.nfe.infnfe.ide.nfref.NfRef;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "ide", namespace = "http://www.portalfiscal.inf.br/nfe")
-@XmlType(name = "ide")
+@XmlRootElement(name = TagXml.IDE, namespace = TagXml.NAMESPACE)
+@XmlType(name = TagXml.IDE)
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ide {
 
-    @XmlElement(name = "cUF", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CUF, namespace = TagXml.NAMESPACE)
     private String cUF;
 
-    @XmlElement(name = "cNF", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CNF, namespace = TagXml.NAMESPACE)
     private String cNF;
 
-    @XmlElement(name = "natOp", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.NATOP, namespace = TagXml.NAMESPACE)
     private String natOp;
 
-    @XmlElement(name = "serie", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.INDPAG, namespace = TagXml.NAMESPACE)
+    private String indPag;
+
+    @XmlElement(name = TagXml.MOD, namespace = TagXml.NAMESPACE)
+    private String mod;
+
+    @XmlElement(name = TagXml.SERIE, namespace = TagXml.NAMESPACE)
     private String serie;
 
-    @XmlElement(name = "nNF", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.NNF, namespace = TagXml.NAMESPACE)
     private String nNF;
 
-    @XmlElement(name = "dhEmi", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.DHEMI, namespace = TagXml.NAMESPACE)
     private String dhEmi;
 
+    @XmlElement(name = TagXml.DHSAIENT, namespace = TagXml.NAMESPACE)
+    private String dhSaiEnt;
 
-    @XmlElement(name = "tpNF", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.TPNF, namespace = TagXml.NAMESPACE)
     private String tpNf;
 
-    @XmlElement(name = "idDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.IDDEST, namespace = TagXml.NAMESPACE)
     private String idDest;
 
-    @XmlElement(name = "cMunFG", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CMUNFG, namespace = TagXml.NAMESPACE)
     private String cMunFg;
 
-    @XmlElement(name = "tpImp", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.TPIMP, namespace = TagXml.NAMESPACE)
     private String tpImp;
 
-    @XmlElement(name = "tpEmis", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.TPEMIS, namespace = TagXml.NAMESPACE)
     private String tpEmis;
 
-    @XmlElement(name = "cDV", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CDV, namespace = TagXml.NAMESPACE)
     private String cDv;
 
-    @XmlElement(name = "tpAmb", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.TPAMB, namespace = TagXml.NAMESPACE)
     private String tpAmb;
 
-    @XmlElement(name = "finNFe", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.FINNFE, namespace = TagXml.NAMESPACE)
     private String finNfe;
 
-    @XmlElement(name = "indFinal", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.INDFINAL, namespace = TagXml.NAMESPACE)
     private String indFinal;
 
-    @XmlElement(name = "indPres", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.INDPRES, namespace = TagXml.NAMESPACE)
     private String indPres;
 
-    @XmlElement(name = "indIntermed", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String indIntermed;
-
-    @XmlElement(name = "procEmi", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.PROCEMI, namespace = TagXml.NAMESPACE)
     private String procEmi;
 
-    @XmlElement(name = "verProc", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.VERPROC, namespace = TagXml.NAMESPACE)
     private String verProc;
+
+    @XmlElement(name = TagXml.DHCONT, namespace = TagXml.NAMESPACE)
+    private String dhCont;
+
+    @XmlElement(name = TagXml.XJUST, namespace = TagXml.NAMESPACE)
+    private String xJust;
+
+    @SerializedName(TagXml.NFREF)
+    @XmlElement(name = TagXml.NFREF, namespace = TagXml.NAMESPACE)
+    private NfRef nfRef;
 
     public String getcUF() {
         return cUF;
@@ -91,6 +109,22 @@ public class Ide {
         this.natOp = natOp;
     }
 
+    public String getIndPag() {
+        return indPag;
+    }
+
+    public void setIndPag(String indPag) {
+        this.indPag = indPag;
+    }
+
+    public String getMod() {
+        return mod;
+    }
+
+    public void setMod(String mod) {
+        this.mod = mod;
+    }
+
     public String getSerie() {
         return serie;
     }
@@ -113,6 +147,14 @@ public class Ide {
 
     public void setDhEmi(String dhEmi) {
         this.dhEmi = dhEmi;
+    }
+
+    public String getDhSaiEnt() {
+        return dhSaiEnt;
+    }
+
+    public void setDhSaiEnt(String dhSaiEnt) {
+        this.dhSaiEnt = dhSaiEnt;
     }
 
     public String getTpNf() {
@@ -195,14 +237,6 @@ public class Ide {
         this.indPres = indPres;
     }
 
-    public String getIndIntermed() {
-        return indIntermed;
-    }
-
-    public void setIndIntermed(String indIntermed) {
-        this.indIntermed = indIntermed;
-    }
-
     public String getProcEmi() {
         return procEmi;
     }
@@ -217,6 +251,30 @@ public class Ide {
 
     public void setVerProc(String verProc) {
         this.verProc = verProc;
+    }
+
+    public String getDhCont() {
+        return dhCont;
+    }
+
+    public void setDhCont(String dhCont) {
+        this.dhCont = dhCont;
+    }
+
+    public String getxJust() {
+        return xJust;
+    }
+
+    public void setxJust(String xJust) {
+        this.xJust = xJust;
+    }
+
+    public NfRef getNfRef() {
+        return nfRef;
+    }
+
+    public void setNfRef(NfRef nfRef) {
+        this.nfRef = nfRef;
     }
 
     @Override

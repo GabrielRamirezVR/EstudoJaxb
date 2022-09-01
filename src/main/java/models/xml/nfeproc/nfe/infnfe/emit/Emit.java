@@ -1,28 +1,32 @@
 package models.xml.nfeproc.nfe.infnfe.emit;
 
-import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+import models.tags.TagXml;
 import models.xml.nfeproc.nfe.infnfe.emit.enderemit.EnderEmit;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "emit", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.EMIT, namespace = TagXml.NAMESPACE)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "emit")
+@XmlType(name = TagXml.EMIT)
 public class Emit {
 
-    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CNPJ)
+    @XmlElement(name = TagXml.CNPJ, namespace = TagXml.NAMESPACE)
     private String cnpj;
 
-    @XmlElement(name = "xNome", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CPF)
+    @XmlElement(name = TagXml.CPF, namespace = TagXml.NAMESPACE)
+    private String cpf;
+
+    @XmlElement(name = TagXml.XNOME, namespace = TagXml.NAMESPACE)
     private String xNome;
 
-    @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String iE;
+    @XmlElement(name = TagXml.XFANT, namespace = TagXml.NAMESPACE)
+    private String xFant;
 
-    @XmlElement(name = "CRT", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String crt;
-
-    @XmlElement(name = "enderEmit", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.ENDEREMIT, namespace = TagXml.NAMESPACE)
     private EnderEmit enderEmit;
 
     public String getCnpj() {
@@ -41,24 +45,24 @@ public class Emit {
         this.xNome = xNome;
     }
 
-    public String getiE() {
-        return iE;
-    }
-
-    public void setiE(String iE) {
-        this.iE = iE;
-    }
-
-    public String getCrt() {
-        return crt;
-    }
-
-    public void setCrt(String crt) {
-        this.crt = crt;
-    }
-
     public EnderEmit getEnderEmit() {
         return enderEmit;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getxFant() {
+        return xFant;
+    }
+
+    public void setxFant(String xFant) {
+        this.xFant = xFant;
     }
 
     public void setEnderEmit(EnderEmit enderEmit) {
@@ -67,6 +71,6 @@ public class Emit {
 
     @Override
     public String toString() {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
+        return new Gson().toJson(this);
     }
 }

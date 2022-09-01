@@ -1,27 +1,27 @@
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsSn900.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.IcmsSn900
-models/xml/nfeproc/nfe/infnfe/emit/enderemit/EnderEmit.java
- models.xml.nfeproc.nfe.infnfe.emit.enderemit.EnderEmit
+models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms70.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms70
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsSn101.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.IcmsSn101
-models/xml/nfeproc/nfe/infnfe/InfNfe.java
- models.xml.nfeproc.nfe.infnfe.InfNfe
+models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsnt/CofinsNT.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsnt.CofinsNT
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsPart.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.IcmsPart
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsSn500.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.IcmsSn500
-models/xml/nfeproc/NfeProc.java
- models.xml.nfeproc.NfeProc
-models/xml/nfeproc/nfe/infnfe/dest/Dest.java
- models.xml.nfeproc.nfe.infnfe.dest.Dest
+models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsoutr/CofinsOutr.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsoutr.CofinsOutr
+models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms41.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms41
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms10.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms10
 models/xml/nfeproc/nfe/infnfe/det/prod/Prod.java
  models.xml.nfeproc.nfe.infnfe.det.prod.Prod
-models/xml/nfeproc/nfe/infnfe/emit/Emit.java
- models.xml.nfeproc.nfe.infnfe.emit.Emit
-models/xml/nfeproc/nfe/infnfe/ide/Ide.java
- models.xml.nfeproc.nfe.infnfe.ide.Ide
+models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms90.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms90
+models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms60.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms60
 Main.java
  Main
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsSt.java
@@ -34,14 +34,14 @@ models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms00.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms00
 models/xml/nfeproc/nfe/infnfe/det/imposto/icms/IcmsSn201.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.IcmsSn201
-service/CarregarXmlService.java
- service.CarregarXmlService
-models/xml/nfeproc/nfe/Nfe.java
- models.xml.nfeproc.nfe.Nfe
+models/xml/nfeproc/nfe/infnfe/det/imposto/ii/Ii.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.ii.Ii
+models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms30.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms30
 models/xml/nfeproc/nfe/infnfe/dest/enderdest/EnderDest.java
  models.xml.nfeproc.nfe.infnfe.dest.enderdest.EnderDest
-models/xml/Xml.java
- models.xml.Xml
+models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsst/CofinsST.java
+ models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsst.CofinsST
 models/xml/nfeproc/nfe/infnfe/det/imposto/pis/pisoutr/PisOutr.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.pis.pisoutr.PisOutr
 models/xml/nfeproc/nfe/infnfe/det/imposto/pis/pisst/PisST.java
@@ -76,27 +76,39 @@ models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms
 models/xml/nfeproc/nfe/infnfe/det/imposto/pis/pisaliq/PisAliq.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.pis.pisaliq.PisAliq
-models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms70.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms70
-models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms30.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms30
-models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsoutr/CofinsOutr.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsoutr.CofinsOutr
-models/xml/nfeproc/nfe/infnfe/det/imposto/ii/Ii.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.ii.Ii
-models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms41.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms41
-models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms60.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms60
-models/xml/nfeproc/nfe/infnfe/det/imposto/icms/Icms90.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.icms.Icms90
-models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsnt/CofinsNT.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsnt.CofinsNT
-models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/cofinsst/CofinsST.java
- models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsst.CofinsST
 models/xml/nfeproc/nfe/infnfe/det/imposto/cofins/Cofins.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.Cofins
-models/xml/nfeproc/nfe/infnfe/det/Det.java
- models.xml.nfeproc.nfe.infnfe.det.Det
+models/xml/nfeproc/nfe/infnfe/ide/nfref/refNfp/RefNfp.java
+ models.xml.nfeproc.nfe.infnfe.ide.nfref.refNfp.RefNfp
 models/xml/nfeproc/nfe/infnfe/det/imposto/Imposto.java
  models.xml.nfeproc.nfe.infnfe.det.imposto.Imposto
+models/xml/nfeproc/nfe/infnfe/avulsa/Avulsa.java
+ models.xml.nfeproc.nfe.infnfe.avulsa.Avulsa
+models/xml/nfeproc/nfe/infnfe/dest/Dest.java
+ models.xml.nfeproc.nfe.infnfe.dest.Dest
+models/xml/nfeproc/nfe/infnfe/ide/nfref/refnf/RefNf.java
+ models.xml.nfeproc.nfe.infnfe.ide.nfref.refnf.RefNf
+models/xml/Xml.java
+ models.xml.Xml
+models/xml/nfeproc/nfe/infnfe/ide/nfref/NfRef.java
+ models.xml.nfeproc.nfe.infnfe.ide.nfref.NfRef
+models/xml/nfeproc/nfe/infnfe/InfNfe.java
+ models.xml.nfeproc.nfe.infnfe.InfNfe
+models/xml/nfeproc/nfe/infnfe/emit/Emit.java
+ models.xml.nfeproc.nfe.infnfe.emit.Emit
+models/xml/nfeproc/nfe/infnfe/ide/Ide.java
+ models.xml.nfeproc.nfe.infnfe.ide.Ide
+models/xml/nfeproc/nfe/infnfe/det/Det.java
+ models.xml.nfeproc.nfe.infnfe.det.Det
+service/CarregarXmlService.java
+ service.CarregarXmlService
+models/xml/nfeproc/nfe/infnfe/ide/nfref/refecf/RefEcf.java
+ models.xml.nfeproc.nfe.infnfe.ide.nfref.refecf.RefEcf
+models/tags/TagXml.java
+ models.tags.TagXml
+models/xml/nfeproc/NfeProc.java
+ models.xml.nfeproc.NfeProc
+models/xml/nfeproc/nfe/Nfe.java
+ models.xml.nfeproc.nfe.Nfe
+models/xml/nfeproc/nfe/infnfe/emit/enderemit/EnderEmit.java
+ models.xml.nfeproc.nfe.infnfe.emit.enderemit.EnderEmit

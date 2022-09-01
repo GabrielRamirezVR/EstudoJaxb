@@ -1,5 +1,6 @@
 package models.xml.nfeproc.nfe.infnfe.det.imposto.cofins;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsaliq.CofinsAliq;
 import models.xml.nfeproc.nfe.infnfe.det.imposto.cofins.cofinsnt.CofinsNT;
@@ -33,4 +34,49 @@ public class Cofins {
     @SerializedName("COFINSST")
     @XmlElement(name = "COFINSST", namespace = "http://www.portalfiscal.inf.br/nfe")
     private CofinsST cofinsST;
+
+    public CofinsAliq getCofinsAliq() {
+        return cofinsAliq;
+    }
+
+    public void setCofinsAliq(CofinsAliq cofinsAliq) {
+        this.cofinsAliq = cofinsAliq;
+    }
+
+    public CofinsQtde getCofinsQtde() {
+        return cofinsQtde;
+    }
+
+    public void setCofinsQtde(CofinsQtde cofinsQtde) {
+        this.cofinsQtde = cofinsQtde;
+    }
+
+    public CofinsNT getCofinsNT() {
+        return cofinsNT;
+    }
+
+    public void setCofinsNT(CofinsNT cofinsNT) {
+        this.cofinsNT = cofinsNT;
+    }
+
+    public CofinsOutr getCofinsOutr() {
+        return cofinsOutr;
+    }
+
+    public void setCofinsOutr(CofinsOutr cofinsOutr) {
+        this.cofinsOutr = cofinsOutr;
+    }
+
+    public CofinsST getCofinsST() {
+        return cofinsST;
+    }
+
+    public void setCofinsST(CofinsST cofinsST) {
+        this.cofinsST = cofinsST;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
+    }
 }

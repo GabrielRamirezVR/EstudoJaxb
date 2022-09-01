@@ -1,32 +1,32 @@
 package models.xml.nfeproc.nfe.infnfe.dest;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
+import models.tags.TagXml;
 import models.xml.nfeproc.nfe.infnfe.dest.enderdest.EnderDest;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "dest", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.DEST, namespace = TagXml.NAMESPACE)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "dest")
+@XmlType(name = TagXml.DEST)
 public class Dest {
 
-    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CNPJ)
+    @XmlElement(name = TagXml.CNPJ, namespace = TagXml.NAMESPACE)
     private String cnpj;
 
-    @XmlElement(name = "xNome", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CPF)
+    @XmlElement(name = TagXml.CPF, namespace = TagXml.NAMESPACE)
+    private String cpf;
+
+    @XmlElement(name = TagXml.XNOME, namespace = TagXml.NAMESPACE)
     private String xNome;
 
-    @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String iE;
+    @XmlElement(name = TagXml.IDESTRANGEIRO, namespace = TagXml.NAMESPACE)
+    private String idEstrangeiro;
 
-    @XmlElement(name = "indIEDest", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String indIeDest;
-
-    @XmlElement(name = "email", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String email;
-
-    @XmlElement(name = "enderDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.ENDERDEST, namespace = TagXml.NAMESPACE)
     private EnderDest enderDest;
 
     public String getCnpj() {
@@ -53,32 +53,24 @@ public class Dest {
         this.enderDest = enderDest;
     }
 
-    public String getiE() {
-        return iE;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setiE(String iE) {
-        this.iE = iE;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public String getIndIeDest() {
-        return indIeDest;
+    public String getIdEstrangeiro() {
+        return idEstrangeiro;
     }
 
-    public void setIndIeDest(String indIeDest) {
-        this.indIeDest = indIeDest;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setIdEstrangeiro(String idEstrangeiro) {
+        this.idEstrangeiro = idEstrangeiro;
     }
 
     @Override
-    public String toString()  {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
+    public String toString() {
+        return new Gson().toJson(this);
     }
 }

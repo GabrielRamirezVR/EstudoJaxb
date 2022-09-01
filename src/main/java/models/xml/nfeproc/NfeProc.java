@@ -1,29 +1,20 @@
 package models.xml.nfeproc;
 
 import com.google.gson.GsonBuilder;
+import models.tags.TagXml;
 import models.xml.nfeproc.nfe.Nfe;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "nfeProc", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.NFEPROC, namespace = TagXml.NAMESPACE)
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = TagXml.NFEPROC)
 public class NfeProc {
-    @XmlAttribute(name = "xmlns")
-    private String xmlns;
-
-    @XmlAttribute(name = "versao")
+    @XmlAttribute(name = TagXml.VERSAO)
     private String versao;
 
-    @XmlElement(name = "NFe", namespace = "http://www.portalfiscal.inf.br/nfe", type = Nfe.class)
+    @XmlElement(name = TagXml.NFE, namespace = TagXml.NAMESPACE)
     private Nfe nfe;
-
-    public String getXmlns() {
-        return xmlns;
-    }
-
-    public void setXmlns(String xmlns) {
-        this.xmlns = xmlns;
-    }
 
     public String getVersao() {
         return versao;

@@ -1,8 +1,6 @@
 package models.xml.nfeproc.nfe.infnfe.dest.enderdest;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "enderDest", namespace = "http://www.portalfiscal.inf.br/nfe")
@@ -133,6 +131,6 @@ public class EnderDest {
 
     @Override
     public String toString()  {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
+        return new Gson().toJson(this);
     }
 }
