@@ -1,45 +1,70 @@
 package models.xml.nfeproc.nfe.infnfe.dest.enderdest;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+import models.tags.TagXml;
+
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "enderDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.ENDERDEST, namespace = TagXml.NAMESPACE)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "enderDest")
+@XmlType(name = TagXml.ENDERDEST)
 public class EnderDest {
 
-    @XmlElement(name = "xLgr", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.XLGR, namespace = TagXml.NAMESPACE)
     private String xLgr;
 
-    @XmlElement(name = "nro", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.NRO, namespace = TagXml.NAMESPACE)
     private String nro;
 
-    @XmlElement(name = "xCpl", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.XCPL, namespace = TagXml.NAMESPACE)
     private String xCpl;
 
-    @XmlElement(name = "xBairro", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.XBAIRRO, namespace = TagXml.NAMESPACE)
     private String xBairro;
 
-    @XmlElement(name = "cMun", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CMUN, namespace = TagXml.NAMESPACE)
     private String cMun;
 
-    @XmlElement(name = "xMun", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.XMUN, namespace = TagXml.NAMESPACE)
     private String xMun;
 
-    @XmlElement(name = "UF", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.UF)
+    @XmlElement(name = TagXml.UF, namespace = TagXml.NAMESPACE)
     private String uF;
 
-    @XmlElement(name = "CEP", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CEP)
+    @XmlElement(name = TagXml.CEP, namespace = TagXml.NAMESPACE)
     private String cep;
 
-    @XmlElement(name = "cPais", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.CPAIS, namespace = TagXml.NAMESPACE)
     private String cPais;
 
-    @XmlElement(name = "xPais", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.XPAIS, namespace = TagXml.NAMESPACE)
     private String xPais;
 
-    @XmlElement(name = "fone", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.FONE, namespace = TagXml.NAMESPACE)
     private String fone;
+
+    @SerializedName(TagXml.INDIEDEST)
+    @XmlElement(name = TagXml.INDIEDEST, namespace = TagXml.NAMESPACE)
+    private String indIeDest;
+
+    @SerializedName(TagXml.IE)
+    @XmlElement(name = TagXml.IE, namespace = TagXml.NAMESPACE)
+    private String ie;
+
+    @SerializedName(TagXml.ISUF)
+    @XmlElement(name = TagXml.ISUF, namespace = TagXml.NAMESPACE)
+    private String isuf;
+
+    @SerializedName(TagXml.IM)
+    @XmlElement(name = TagXml.IM, namespace = TagXml.NAMESPACE)
+    private String im;
+
+    @SerializedName(TagXml.EMAIL)
+    @XmlElement(name = TagXml.EMAIL, namespace = TagXml.NAMESPACE)
+    private String email;
 
     public String getxLgr() {
         return xLgr;
@@ -127,6 +152,46 @@ public class EnderDest {
 
     public void setFone(String fone) {
         this.fone = fone;
+    }
+
+    public String getIndIeDest() {
+        return indIeDest;
+    }
+
+    public void setIndIeDest(String indIeDest) {
+        this.indIeDest = indIeDest;
+    }
+
+    public String getIe() {
+        return ie;
+    }
+
+    public void setIe(String ie) {
+        this.ie = ie;
+    }
+
+    public String getIsuf() {
+        return isuf;
+    }
+
+    public void setIsuf(String isuf) {
+        this.isuf = isuf;
+    }
+
+    public String getIm() {
+        return im;
+    }
+
+    public void setIm(String im) {
+        this.im = im;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

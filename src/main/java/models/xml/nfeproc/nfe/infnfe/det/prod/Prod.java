@@ -1,63 +1,99 @@
 package models.xml.nfeproc.nfe.infnfe.det.prod;
 
-import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+import models.tags.TagXml;
+import models.xml.nfeproc.nfe.infnfe.det.prod.di.Di;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "prod", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.PROD, namespace = TagXml.NAMESPACE)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "prod")
+@XmlType(name = TagXml.PROD, namespace = TagXml.NAMESPACE)
 public class Prod {
-    @XmlElement(name = "cProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CPROD)
+    @XmlElement(name = TagXml.CPROD, namespace = TagXml.NAMESPACE)
     private String cProd;
 
-    @XmlElement(name = "cEAN", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String ean;
+    @SerializedName(TagXml.CEAN)
+    @XmlElement(name = TagXml.CEAN, namespace = TagXml.NAMESPACE)
+    private String cEan;
 
-    @XmlElement(name = "xProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.XPROD)
+    @XmlElement(name = TagXml.XPROD, namespace = TagXml.NAMESPACE)
     private String xProd;
 
-    @XmlElement(name = "NCM", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.NCM)
+    @XmlElement(name = TagXml.NCM, namespace = TagXml.NAMESPACE)
     private String ncm;
 
-    @XmlElement(name = "CEST", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String cest;
+    @SerializedName(TagXml.NVE)
+    @XmlElement(name = TagXml.NVE, namespace = TagXml.NAMESPACE)
+    private String nve;
 
-    @XmlElement(name = "indEscala", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String indEscala;
+    @SerializedName(TagXml.EXTIPI)
+    @XmlElement(name = TagXml.EXTIPI, namespace = TagXml.NAMESPACE)
+    private String exTipi;
 
-    @XmlElement(name = "CFOP", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CFOP)
+    @XmlElement(name = TagXml.CFOP, namespace = TagXml.NAMESPACE)
     private String cfop;
 
-    @XmlElement(name = "uCom", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.UCOM)
+    @XmlElement(name = TagXml.UCOM, namespace = TagXml.NAMESPACE)
     private String uCom;
 
-    @XmlElement(name = "vUnCom", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.QCOM)
+    @XmlElement(name = TagXml.QCOM, namespace = TagXml.NAMESPACE)
+    private String qCom;
+
+    @SerializedName(TagXml.VUNCOM)
+    @XmlElement(name = TagXml.VUNCOM, namespace = TagXml.NAMESPACE)
     private String vUncom;
 
-    @XmlElement(name = "vProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.VPROD)
+    @XmlElement(name = TagXml.VPROD, namespace = TagXml.NAMESPACE)
     private String vProd;
 
-    @XmlElement(name = "cEANTrib", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.CEANTRIB)
+    @XmlElement(name = TagXml.CEANTRIB, namespace = TagXml.NAMESPACE)
     private String cEanTrib;
 
-    @XmlElement(name = "uTrib", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.UTRIB)
+    @XmlElement(name = TagXml.UTRIB, namespace = TagXml.NAMESPACE)
     private String uTrib;
 
-    @XmlElement(name = "qTrib", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.QTRIB)
+    @XmlElement(name = TagXml.QTRIB, namespace = TagXml.NAMESPACE)
     private String qTrib;
 
-    @XmlElement(name = "vUnTrib", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.VUNTRIB)
+    @XmlElement(name = TagXml.VUNTRIB, namespace = TagXml.NAMESPACE)
     private String vUnTrib;
 
-    @XmlElement(name = "indTot", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @SerializedName(TagXml.VFRETE)
+    @XmlElement(name = TagXml.VFRETE, namespace = TagXml.NAMESPACE)
+    private String vFrete;
+
+    @SerializedName(TagXml.VSEG)
+    @XmlElement(name = TagXml.VSEG, namespace = TagXml.NAMESPACE)
+    private String vSeg;
+
+    @SerializedName(TagXml.VDESC)
+    @XmlElement(name = TagXml.VDESC, namespace = TagXml.NAMESPACE)
+    private String vDesc;
+
+    @SerializedName(TagXml.VOUTRO)
+    @XmlElement(name = TagXml.VOUTRO, namespace = TagXml.NAMESPACE)
+    private String vOutro;
+
+    @SerializedName(TagXml.INDTOT)
+    @XmlElement(name = TagXml.INDTOT, namespace = TagXml.NAMESPACE)
     private String indTot;
 
-    @XmlElement(name = "xPed", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String xPed;
-
-    @XmlElement(name = "nItemPed", namespace = "http://www.portalfiscal.inf.br/nfe")
-    private String nItemPed;
+    @SerializedName(TagXml.DI)
+    @XmlElement(name = TagXml.DI, namespace = TagXml.NAMESPACE)
+    private Di di;
 
     public String getcProd() {
         return cProd;
@@ -67,12 +103,12 @@ public class Prod {
         this.cProd = cProd;
     }
 
-    public String getEan() {
-        return ean;
+    public String getcEan() {
+        return cEan;
     }
 
-    public void setEan(String ean) {
-        this.ean = ean;
+    public void setcEan(String cEan) {
+        this.cEan = cEan;
     }
 
     public String getxProd() {
@@ -91,20 +127,20 @@ public class Prod {
         this.ncm = ncm;
     }
 
-    public String getCest() {
-        return cest;
+    public String getNve() {
+        return nve;
     }
 
-    public void setCest(String cest) {
-        this.cest = cest;
+    public void setNve(String nve) {
+        this.nve = nve;
     }
 
-    public String getIndEscala() {
-        return indEscala;
+    public String getExTipi() {
+        return exTipi;
     }
 
-    public void setIndEscala(String indEscala) {
-        this.indEscala = indEscala;
+    public void setExTipi(String exTipi) {
+        this.exTipi = exTipi;
     }
 
     public String getCfop() {
@@ -121,6 +157,14 @@ public class Prod {
 
     public void setuCom(String uCom) {
         this.uCom = uCom;
+    }
+
+    public String getqCom() {
+        return qCom;
+    }
+
+    public void setqCom(String qCom) {
+        this.qCom = qCom;
     }
 
     public String getvUncom() {
@@ -171,6 +215,38 @@ public class Prod {
         this.vUnTrib = vUnTrib;
     }
 
+    public String getvFrete() {
+        return vFrete;
+    }
+
+    public void setvFrete(String vFrete) {
+        this.vFrete = vFrete;
+    }
+
+    public String getvSeg() {
+        return vSeg;
+    }
+
+    public void setvSeg(String vSeg) {
+        this.vSeg = vSeg;
+    }
+
+    public String getvDesc() {
+        return vDesc;
+    }
+
+    public void setvDesc(String vDesc) {
+        this.vDesc = vDesc;
+    }
+
+    public String getvOutro() {
+        return vOutro;
+    }
+
+    public void setvOutro(String vOutro) {
+        this.vOutro = vOutro;
+    }
+
     public String getIndTot() {
         return indTot;
     }
@@ -179,24 +255,16 @@ public class Prod {
         this.indTot = indTot;
     }
 
-    public String getxPed() {
-        return xPed;
+    public Di getDi() {
+        return di;
     }
 
-    public void setxPed(String xPed) {
-        this.xPed = xPed;
-    }
-
-    public String getnItemPed() {
-        return nItemPed;
-    }
-
-    public void setnItemPed(String nItemPed) {
-        this.nItemPed = nItemPed;
+    public void setDi(Di di) {
+        this.di = di;
     }
 
     @Override
     public String toString()  {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
+        return new Gson().toJson(this);
     }
 }

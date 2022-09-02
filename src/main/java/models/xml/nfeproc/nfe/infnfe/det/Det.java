@@ -1,20 +1,21 @@
 package models.xml.nfeproc.nfe.infnfe.det;
 
 import com.google.gson.GsonBuilder;
+import models.tags.TagXml;
 import models.xml.nfeproc.nfe.infnfe.det.imposto.Imposto;
 import models.xml.nfeproc.nfe.infnfe.det.prod.Prod;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "det", namespace = "http://www.portalfiscal.inf.br/nfe")
+@XmlRootElement(name = TagXml.DET, namespace = "http://www.portalfiscal.inf.br/nfe")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "det")
+@XmlType(name = TagXml.DET)
 public class Det {
 
-    @XmlAttribute(name = "nItem")
+    @XmlAttribute(name = TagXml.NITEM)
     private String nItem;
 
-    @XmlElement(name = "prod", namespace = "http://www.portalfiscal.inf.br/nfe")
+    @XmlElement(name = TagXml.PROD, namespace = "http://www.portalfiscal.inf.br/nfe")
     private Prod prod;
 
     @XmlElement(name = "imposto", namespace = "http://www.portalfiscal.inf.br/nfe")

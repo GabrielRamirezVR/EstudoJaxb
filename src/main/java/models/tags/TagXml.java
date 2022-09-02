@@ -82,5 +82,42 @@ public class TagXml {
     public static final String ENTREGA = "entrega";
     public static final String AUTXML = "autXML";
     public static final String DET = "det";
+    public static final String NITEM = "nItem";
+    public static final String PROD = "prod";
+    public static final String CPROD = "cProd";
+    public static final String CEAN = "cEAN";
+    public static final String XPROD = "xProd";
+    public static final String NCM = "NCM";
+    public static final String NVE = "NVE";
+    public static final String EXTIPI = "EXTIPI";
+    public static final String CFOP = "CFOP";
+    public static final String UCOM = "uCom";
+    public static final String QCOM = "qCom";
+    public static final String VUNCOM = "vUnCom";
+    public static final String VPROD = "vProd";
+    public static final String CEANTRIB = "cEANTrib";
+    public static final String UTRIB = "uTrib";
+    public static final String QTRIB = "qTrib";
+    public static final String VUNTRIB = "vUnTrib";
+    public static final String VFRETE = "vFrete";
+    public static final String VSEG = "vSeg";
+    public static final String VDESC = "vDesc";
+    public static final String VOUTRO = "vOutro";
+    public static final String INDTOT = "indTot";
+    public static final String DI = "DI";
+    public static final String NDI = "nDI";
+    public static final String DDI = "dDI";
+    public static final String XLOCDESEMB = "xLocDesemb";
+    public static final String UFDESEMB = "UFDesemb";
+    public static final String DDESEMB = "dDesemb";
+    public static final String TPVIATRANSP = "tpViaTransp";
+    public static final String VAFRMM = "vAFRMM";
+    public static final String TPINTERMEDIO = "tpIntermedio";
+    public static final String UFTERCEIRO = "UFTerceiro";
+    public static final String CEXPORTADOR = "cExportador";
+    public static final String ADI = "adi";
+    public static final String NADICAO = "nAdicao";
+    public static final String NSEQADIC = "nSeqAdic";
+
 
 }
